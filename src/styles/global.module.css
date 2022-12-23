@@ -16,6 +16,19 @@
   --red-50: #e25858;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background: var(--gray-700);
+  background: var(--gray-600);
+}
+
+body,
+input,
+textarea,
+button {
+  font-family: "Inter", sans-serif;
 }
