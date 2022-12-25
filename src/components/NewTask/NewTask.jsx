@@ -1,5 +1,5 @@
-import vector from "../../assets/vector.svg";
 import styles from "../NewTask/NewTask.module.css";
+import vector from "../../assets/vector.svg";
 
 export function NewTask() {
   return (
@@ -9,7 +9,9 @@ export function NewTask() {
         placeholder="Adicione uma nova tarefa"
         type="text"
       />
-      <button className={styles.button}>Criar </button>
+      <button className={styles.button}>
+        <text>Criar</text> <img src={vector} alt="Símbolo de adição" />
+      </button>
     </div>
   );
 }

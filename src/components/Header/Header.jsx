@@ -1,5 +1,5 @@
 import React from "react";
-import toDoLogo from "../../assets/todo-logo.svg";
+import toDoLogo from "../../assets/to-do-logo.svg";
 import styles from "../Header/Header.module.css";
 
 export function Header() {
