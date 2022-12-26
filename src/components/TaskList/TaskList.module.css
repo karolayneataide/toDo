@@ -1,18 +1,23 @@
 .container {
-  margin-top: 9.4rem;
-  left: 0;
-  right: 0;
-  width: auto;
-  display: grid;
-  align-items: center;
+  display: flex;
   justify-content: center;
+  margin-top: 9.4rem;
+}
+
+.boxSize {
+  width: 730px;
 }
 
 .wrapper {
   display: flex;
-  gap: 35rem;
-  align-self: end;
-  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
 }
 
 .createdTask {
@@ -32,6 +37,7 @@
 .counter {
   display: flex;
   width: 25px;
+  background: var(--gray-400);
   border: 1px solid var(--gray-700);
   border-radius: 999px;
   padding: 2px 8px 2px 8px;
@@ -40,32 +46,4 @@
   font-weight: 700;
   font-size: 12px;
   line-height: 14.52px;
-}
-
-.emptyList {
-  width: 736px;
-  border-top: 1px solid var(--gray-400);
-  border-radius: 8px;
-  display: grid;
-  align-items: center;
-  justify-content: center;
-}
-
-.emptyList img {
-  margin-top: 64px;
-  margin-bottom: 16px;
-}
-
-.emptyList p::before {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 22px;
-  text-align: center;
-}
-
-.emptyList p::after {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
-  text-align: center;
 }
