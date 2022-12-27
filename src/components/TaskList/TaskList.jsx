@@ -1,14 +1,15 @@
 import styles from "../TaskList/TaskList.module.css";
 import { EmptyList } from "../EmptyList/EmptyList";
+import { FullList } from "../FullList/FullList";
 
-export function TaskList() {
+export function TaskList({ tasks = ["Nota de exemplo"] }) {
   return (
     <div className={styles.container}>
       <div className={styles.boxSize}>
         <div className={styles.wrapper}>
           <div className={styles.box}>
             <div className={styles.createdTask}>Tarefas criadas</div>
-            <div className={styles.counter}>2</div>
+            <div className={styles.counter}>{tasks.length}</div>
           </div>
           <div className={styles.box}>
             <div className={styles.completeTask}>Tarefas concluídas</div>
@@ -16,7 +17,7 @@ export function TaskList() {
           </div>
         </div>
         <div>
-          <EmptyList />
+          {tasks.length === 0 ? <EmptyList /> : <FullList tasks={tasks} />}
         </div>
       </div>
     </div>

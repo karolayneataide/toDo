@@ -1,0 +1,42 @@
+.fullList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 8px;
+  gap: 8px;
+  padding: 16px;
+  background: var(--gray-500);
+  border: 1px solid var(--gray-400);
+}
+
+.checkbox label {
+  color: var(--gray-100);
+  justify-content: flex-start;
+}
+
+.checkbox input {
+  justify-content: flex-start;
+  /* border-radius: 50%; */
+  /* border: 1px solid var(--blue-100); */
+}
+
+.checkbox button {
+  background: var(--gray-500);
+  border: none;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.checkbox img {
+  width: 12.48px;
+  background: var(--gray-500);
+  color: var(--gray-300);
+}

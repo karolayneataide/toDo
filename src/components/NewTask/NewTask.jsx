@@ -10,7 +10,7 @@ export function NewTask() {
         type="text"
       />
       <button className={styles.button}>
-        <text>Criar</text> <img src={vector} alt="Símbolo de adição" />
+        <span>Criar</span> <img src={vector} alt="Símbolo de adição" />
       </button>
     </div>
   );

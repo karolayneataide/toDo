@@ -24,15 +24,22 @@
 }
 
 .button {
-  height: 52px;
-  width: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 16px;
   border: 1px solid var(--blue-200);
   border-radius: 8px;
   background: var(--blue-200);
   gap: 8px;
 }
 
-.button text {
+.button:hover {
+  background: var(--blue-100);
+}
+
+.button span {
   font-size: 14px;
   font-weight: 700;
   line-height: 19.6px;
