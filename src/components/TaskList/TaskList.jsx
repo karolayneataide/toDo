@@ -2,7 +2,7 @@ import styles from "../TaskList/TaskList.module.css";
 import { EmptyList } from "../EmptyList/EmptyList";
 import { FullList } from "../FullList/FullList";
 
-export function TaskList({ tasks = ["Nota de exemplo"] }) {
+export function TaskList({ tasks }) {
   return (
     <div className={styles.container}>
       <div className={styles.boxSize}>
