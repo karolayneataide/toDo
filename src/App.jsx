@@ -5,11 +5,7 @@ import { TaskList } from "./components/TaskList/TaskList";
 import "./styles/global.module.css";
 
 function App() {
-  const [tasks, setTasks] = useState([
-    "Terminar relatório",
-    "Escrever email",
-    "Comprar pão",
-  ]);
+  const [tasks, setTasks] = useState([]);
 
   return (
     <div>
