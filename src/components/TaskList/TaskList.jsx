@@ -2,7 +2,7 @@ import styles from "../TaskList/TaskList.module.css";
 import { EmptyList } from "../EmptyList/EmptyList";
 import { FullList } from "../FullList/FullList";
 
-export function TaskList({ tasks }) {
+export function TaskList({ tasks, onDeleteTask }) {
   return (
     <div className={styles.container}>
       <div className={styles.boxSize}>
@@ -17,7 +17,11 @@ export function TaskList({ tasks }) {
           </div>
         </div>
         <div>
-          {tasks.length === 0 ? <EmptyList /> : <FullList tasks={tasks} />}
+          {tasks.length === 0 ? (
+            <EmptyList />
+          ) : (
+            <FullList onDeleteTask={onDeleteTask} tasks={tasks} />
+          )}
         </div>
       </div>
     </div>

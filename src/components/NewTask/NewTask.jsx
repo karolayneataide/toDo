@@ -1,6 +1,7 @@
 import styles from "../NewTask/NewTask.module.css";
 import vector from "../../assets/vector.svg";
 import { useState } from "react";
+import { v4 } from "uuid";
 
 export function NewTask({ setTasks }) {
   const [task, setTask] = useState("");
@@ -8,9 +9,15 @@ export function NewTask({ setTasks }) {
   function handleCreateNewTask(event) {
     event.preventDefault();
 
-    setTasks((tasks) => [...tasks, task]);
-
-    // event.target.task = "";
+    setTask("");
+    setTasks((tasks) => [
+      ...tasks,
+      {
+        id: v4(),
+        content: task,
+        checked: false,
+      },
+    ]);
   }
 
   return (
@@ -20,6 +27,7 @@ export function NewTask({ setTasks }) {
           name="task"
           placeholder="Adicione uma nova tarefa"
           className={styles.input}
+          required
           type="text"
           value={task}
           onChange={(event) => setTask(event.target.value)}
