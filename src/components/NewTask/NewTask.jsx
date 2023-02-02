@@ -15,7 +15,7 @@ export function NewTask({ setTasks }) {
       {
         id: v4(),
         content: task,
-        checked: false,
+        isChecked: false,
       },
     ]);
   }

@@ -36,7 +36,6 @@
 
 .counter {
   display: flex;
-  width: 25px;
   background: var(--gray-400);
   border: 1px solid var(--gray-700);
   border-radius: 999px;
