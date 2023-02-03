@@ -28,6 +28,7 @@ export function NewTask({ setTasks }) {
           placeholder="Adicione uma nova tarefa"
           className={styles.input}
           required
+          maxLength={75}
           type="text"
           value={task}
           onChange={(event) => setTask(event.target.value)}
