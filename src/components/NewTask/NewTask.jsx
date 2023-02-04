@@ -2,8 +2,10 @@ import styles from "../NewTask/NewTask.module.css";
 import vector from "../../assets/vector.svg";
 import { useState } from "react";
 import { v4 } from "uuid";
+import useTasks from "../../hooks/useTasks";
 
-export function NewTask({ setTasks }) {
+export function NewTask() {
+  const { setTasks } = useTasks();
   const [task, setTask] = useState("");
 
   function handleCreateNewTask(event) {

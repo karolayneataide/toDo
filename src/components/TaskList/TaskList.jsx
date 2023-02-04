@@ -1,8 +1,11 @@
 import styles from "../TaskList/TaskList.module.css";
 import { EmptyList } from "../EmptyList/EmptyList";
 import { FullList } from "../FullList/FullList";
+import useTasks from "../../hooks/useTasks";
 
-export function TaskList({ tasks, onDeleteTask, handleChecked }) {
+export function TaskList() {
+  const { tasks, onDeleteTask, handleChecked } = useTasks();
+
   const taskCreated = tasks.length;
   const tasksChecked = tasks.filter((task) => task.isChecked).length;
 
