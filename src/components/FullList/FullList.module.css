@@ -18,34 +18,54 @@
 }
 
 .startBox {
+  position: relative;
   display: flex;
   justify-content: flex-start;
 }
 
-.startBox input[type="checkbox"] {
+.startBox label {
+  background-color: transparent;
+  border: 0.125rem solid var(--blue-100);
   border-radius: 50%;
-  align-items: center;
+  margin-right: 0.5rem;
   cursor: pointer;
+  height: 1.5rem;
+  width: 1.5rem;
+  display: block;
 }
 
-.startBox input[type="checkbox"]:not(:checked) {
-  border: 0.125rem solid var(--blue-200);
-  background-color: var(--gray-500);
+.startBox label:after {
+  border: 0.125rem solid var(--gray-100);
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 0.25rem;
+  left: 0.438rem;
+  opacity: 0;
+  position: absolute;
+  top: 0.5rem;
+  transform: rotate(-45deg);
+  width: 0.5rem;
 }
 
-.startBox input[type="checkbox"]:hover {
-  border: 0.125rem solid var(--blue-200);
-  background-color: var(--gray-400);
+.startBox input[type="checkbox"] {
+  visibility: hidden;
+  display: none;
+  opacity: 0;
 }
 
-.startBox input[type="checkbox"]:checked {
-  border: 0.125rem solid var(--purple-200);
-  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.98007 15.4262C12.0726 15.4262 15.3903 12.1085 15.3903 8.01593C15.3903 3.92336 12.0726 0.605682 7.98007 0.605682C3.8875 0.605682 0.569824 3.92336 0.569824 8.01593C0.569824 12.1085 3.8875 15.4262 7.98007 15.4262Z' fill='%235E60CE'/%3E%3C/svg%3E");
-  background-position: center;
+.startBox input[type="checkbox"]:checked + label {
+  background-color: var(--purple-200);
+  border-color: var(--purple-200);
+}
+
+.startBox input[type="checkbox"]:checked + label:after {
+  opacity: 1;
 }
 
 .centerBox {
   display: flex;
+  align-items: center;
   justify-content: left;
   line-height: 1.225rem;
   font-size: 0.875rem;
@@ -62,7 +82,6 @@
 
 .endBox {
   display: flex;
-  align-items: center;
   justify-content: flex-end;
 }
 

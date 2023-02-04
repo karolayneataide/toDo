@@ -11,9 +11,11 @@ export function FullList({ tasks, onDeleteTask, handleChecked }) {
             <div className={styles.startBox}>
               <input
                 checked={task.isChecked}
+                id={task.id}
                 onChange={() => handleChecked(task.id)}
                 type="checkbox"
               />
+              <label htmlFor={task.id}></label>
             </div>
             <div className={styles.centerBox}>
               <label className={isChecked}>{task.content}</label>
