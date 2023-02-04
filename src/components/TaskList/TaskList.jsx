@@ -4,7 +4,7 @@ import { FullList } from "../FullList/FullList";
 import useTasks from "../../hooks/useTasks";
 
 export function TaskList() {
-  const { tasks, onDeleteTask, handleChecked } = useTasks();
+  const { tasks } = useTasks();
 
   const taskCreated = tasks.length;
   const tasksChecked = tasks.filter((task) => task.isChecked).length;
@@ -24,17 +24,7 @@ export function TaskList() {
             </div>
           </div>
         </div>
-        <div>
-          {tasks.length === 0 ? (
-            <EmptyList />
-          ) : (
-            <FullList
-              handleChecked={handleChecked}
-              onDeleteTask={onDeleteTask}
-              tasks={tasks}
-            />
-          )}
-        </div>
+        <div>{tasks.length === 0 ? <EmptyList /> : <FullList />}</div>
       </div>
     </div>
   );

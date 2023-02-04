@@ -1,7 +1,10 @@
 import styles from "../FullList/FullList.module.css";
 import Trash from "../../assets/trash.svg";
+import useTasks from "../../hooks/useTasks";
 
-export function FullList({ tasks, onDeleteTask, handleChecked }) {
+export function FullList() {
+  const { tasks, deleteTask, handleChecked } = useTasks();
+
   return (
     <div className={styles.fullList}>
       {tasks.map((task, index) => {
@@ -22,7 +25,7 @@ export function FullList({ tasks, onDeleteTask, handleChecked }) {
             </div>
             <div className={styles.endBox}>
               <button
-                onClick={() => onDeleteTask(task.id)}
+                onClick={() => deleteTask(task.id)}
                 type="submit"
                 title="Deletar tarefa"
               >
